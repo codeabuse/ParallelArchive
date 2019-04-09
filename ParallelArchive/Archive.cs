@@ -457,6 +457,7 @@ namespace ParallelArchive
             {
                 this.workFolder = Directory.CreateDirectory(workFolderName);
             }
+            Console.WriteLine($"{workFolderName} set as work directory");
         }
     }
 }

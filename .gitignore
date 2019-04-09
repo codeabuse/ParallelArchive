@@ -14,6 +14,7 @@ sysinfo.txt
 *.pidb.meta
 *.meta
 
+
 ###
 # VS/MD solution and project files
 ###
@@ -28,6 +29,7 @@ sysinfo.txt
 *.userprefs
 *.pidb
 .DS_Store
+*.lock
 
 ###
 # OS generated

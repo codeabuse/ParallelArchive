@@ -11,7 +11,9 @@ namespace ParallelArchive
     {
         static MTArchive archive;
         static bool exit;
-        static string help = "";
+        static string help = "\nAvailable commands:\ncompress [source] [target] - compress file" +
+            "\ndecompress [source].pgz [target] - decompress file\ndirectory [workfolder] - change/create work directory in program's folder" +
+            "\nhelp - show this commands list\nexit - leave program";
 
         static int Main(string[] args)
         {
@@ -35,6 +37,8 @@ namespace ParallelArchive
             }
             else
             {
+                Console.WriteLine("MultithreadArchive v0.1.2");
+                Console.WriteLine("\n" + help);
                 ConsoleCommands();
             }
             Console.WriteLine("Program closing...");
@@ -59,7 +63,7 @@ namespace ParallelArchive
                         archive.BeginWork(commands[1], commands[2], System.IO.Compression.CompressionMode.Decompress);
                         break;
 
-                    case "workfolder":
+                    case "directory":
                         archive.SetWorkFolder(commands[1]);
                         break;
 
